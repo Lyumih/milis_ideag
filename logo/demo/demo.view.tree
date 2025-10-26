@@ -1,6 +1,6 @@
-$company_template_logo_demo $mol_example_small
+$milis_ideag_logo_demo $mol_example_small
 	sub /
-		<= Logo $company_template_logo
+		<= Logo $milis_ideag_logo
 	tags /
 		\logo
 	aspects /

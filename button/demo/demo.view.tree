@@ -1,8 +1,8 @@
-$company_template_button_demo $mol_example_small
+$milis_ideag_button_demo $mol_example_small
 	title \Company Button
 	sub /
-		<= Login $company_template_button title \Войти
-		<= Logout $company_template_button title \Выйти
+		<= Login $milis_ideag_button title \Войти
+		<= Logout $milis_ideag_button title \Выйти
 	tags /
 		\logo
 		\icon
