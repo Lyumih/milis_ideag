@@ -1,0 +1,7 @@
+$company_template_logo_demo $mol_example_small
+	sub /
+		<= Logo $company_template_logo
+	tags /
+		\logo
+	aspects /
+		\UI/Logo
