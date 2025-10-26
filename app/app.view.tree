@@ -1,28 +1,26 @@
-$milis_ideag_app $mol_book2_catalog
-	menu_title \Моя компания
-	Menu_logo <= Logo2 $milis_ideag_logo
-	param \page
+$milis_ideag_app $mol_book2
+	title \Генератор идей
 	plugins /
 		<= Theme $mol_theme_auto
-	menu_tools /
+	tools /
 		<= Sources $mol_link_source
 			uri \https://github.com/Lyumih/milis_ideag
 		<= Lighter $mol_lights_toggle
-	menu_foot /
-		<= Logout_button $milis_ideag_button
-			title \Выйти
-	Spread_default 
-		<= Docs $mol_page 
-			body / 
-				<= Docs_uri $mol_link 
-					title \Демонстрации
-					uri \http://localhost:9080/milis/ideag/docs/-/test.html
-	spreads *
-		hello <= Page1 $mol_page
-			title \Привет $mol!
+	pages /
+		<= Ideas_page $mol_page
+			title \Генератор идей
 			body /
-				<= Hello $mol_text text \
-					\# Привет https://mol.hyoo.ru/#!section=docs/=6leyma_5ks814]
-					\Инструкция по шаблону читай на https://github.com/Lyumih/milis_ideag
-			
-				
+				<= Add_idea_labeler $mol_labeler
+					title \Добавить идею
+					content /
+						<= New_idea $mol_string
+							value? <=> new_idea? \
+						<= Add_idea_button $mol_button_major
+							title \+
+							click <=> add_idea null
+				<= Idea_filters $mol_list rows <= idea_list /
+					- <= Idea_text*0 $mol_text text <= idea_text* \
+		<= Covering_page $mol_page
+			title \Пересечения
+			body /
+				<= Table $mol_list rows <= idea_list /
