@@ -7001,6 +7001,7 @@ var $;
 		Ideas_page(){
 			const obj = new this.$.$mol_page();
 			(obj.title) = () => ("Генератор идей");
+			(obj.tools) = () => ([(this.Sources()), (this.Lighter())]);
 			(obj.body) = () => ([(this.Add_idea_labeler()), (this.Idea_filters())]);
 			return obj;
 		}
@@ -7020,9 +7021,6 @@ var $;
 		}
 		plugins(){
 			return [(this.Theme())];
-		}
-		tools(){
-			return [(this.Sources()), (this.Lighter())];
 		}
 		pages(){
 			return [(this.Ideas_page()), (this.Covering_page())];
@@ -7291,16 +7289,16 @@ var $;
             $mol_assert_unique([1], [2], [3]);
         },
         'two must be alike'() {
-            $mol_assert_like([3], [3]);
+            $mol_assert_equal([3], [3]);
         },
         'three must be alike'() {
-            $mol_assert_like([3], [3], [3]);
+            $mol_assert_equal([3], [3], [3]);
         },
         'two object must be alike'() {
-            $mol_assert_like({ a: 1 }, { a: 1 });
+            $mol_assert_equal({ a: 1 }, { a: 1 });
         },
         'three object must be alike'() {
-            $mol_assert_like({ a: 1 }, { a: 1 }, { a: 1 });
+            $mol_assert_equal({ a: 1 }, { a: 1 }, { a: 1 });
         },
     });
 })($ || ($ = {}));
@@ -8013,7 +8011,7 @@ var $;
             }
             await $mol_wire_async(A).a();
             $mol_assert_equal(A.instances.length, 2);
-            $mol_assert_equal(A.instances[0] instanceof A);
+            $mol_assert_equal(A.instances[0] instanceof A, true);
             $mol_assert_equal(A.instances[0], A.instances[1]);
         }
     });

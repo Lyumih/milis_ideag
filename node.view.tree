@@ -233,13 +233,13 @@ $milis_ideag_app $mol_book2
 	title \Генератор идей
 	plugins /
 		<= Theme $mol_theme_auto
-	tools /
-		<= Sources $mol_link_source
-			uri \https://github.com/Lyumih/milis_ideag
-		<= Lighter $mol_lights_toggle
 	pages /
 		<= Ideas_page $mol_page
 			title \Генератор идей
+			tools /
+				<= Sources $mol_link_source
+					uri \https://github.com/Lyumih/milis_ideag
+				<= Lighter $mol_lights_toggle
 			body /
 				<= Add_idea_labeler $mol_labeler
 					title \Добавить идею

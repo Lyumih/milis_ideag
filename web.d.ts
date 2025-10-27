@@ -2179,22 +2179,27 @@ declare namespace $ {
 		,
 		ReturnType< $mol_page['title'] >
 	>
-	type $mol_page__body_milis_ideag_app_9 = $mol_type_enforce<
+	type $mol_page__tools_milis_ideag_app_9 = $mol_type_enforce<
+		readonly(any)[]
+		,
+		ReturnType< $mol_page['tools'] >
+	>
+	type $mol_page__body_milis_ideag_app_10 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_page['body'] >
 	>
-	type $mol_list__rows_milis_ideag_app_10 = $mol_type_enforce<
+	type $mol_list__rows_milis_ideag_app_11 = $mol_type_enforce<
 		ReturnType< $milis_ideag_app['idea_list'] >
 		,
 		ReturnType< $mol_list['rows'] >
 	>
-	type $mol_page__title_milis_ideag_app_11 = $mol_type_enforce<
+	type $mol_page__title_milis_ideag_app_12 = $mol_type_enforce<
 		string
 		,
 		ReturnType< $mol_page['title'] >
 	>
-	type $mol_page__body_milis_ideag_app_12 = $mol_type_enforce<
+	type $mol_page__body_milis_ideag_app_13 = $mol_type_enforce<
 		readonly(any)[]
 		,
 		ReturnType< $mol_page['body'] >
@@ -2215,7 +2220,6 @@ declare namespace $ {
 		Covering_page( ): $mol_page
 		title( ): string
 		plugins( ): readonly(any)[]
-		tools( ): readonly(any)[]
 		pages( ): readonly(any)[]
 	}
 	

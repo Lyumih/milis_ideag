@@ -7010,6 +7010,7 @@ var $;
 		Ideas_page(){
 			const obj = new this.$.$mol_page();
 			(obj.title) = () => ("Генератор идей");
+			(obj.tools) = () => ([(this.Sources()), (this.Lighter())]);
 			(obj.body) = () => ([(this.Add_idea_labeler()), (this.Idea_filters())]);
 			return obj;
 		}
@@ -7029,9 +7030,6 @@ var $;
 		}
 		plugins(){
 			return [(this.Theme())];
-		}
-		tools(){
-			return [(this.Sources()), (this.Lighter())];
 		}
 		pages(){
 			return [(this.Ideas_page()), (this.Covering_page())];
