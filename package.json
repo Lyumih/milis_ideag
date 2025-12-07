@@ -183,7 +183,6 @@
     "$milis_log"
   ],
   "dependencies": {
-    "internal": "*",
     "jsdom": "*"
   }
 }
