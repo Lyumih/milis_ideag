@@ -1,0 +1,10 @@
+{
+	"name": "milis_ideag_app",
+	"short_name": "milis_ideag_app",
+	"description": "",
+	"id": "milis_ideag_app",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#000000",
+	"theme_color": "#000000"
+}
